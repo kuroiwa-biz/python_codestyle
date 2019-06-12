@@ -1,0 +1,6 @@
+# see https://github.com/google/yapf#knobs
+[style]
+based_on_style = pep8
+spaces_before_comment=15, 20
+column_limit = 160
+dedent_closing_brackets = true
