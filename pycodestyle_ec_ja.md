@@ -7,17 +7,16 @@ pycodestyleのエラーの内容をある程度分かるように実際に出る
   * `E101` : Indentation contains mixed spaces and tabs
     - インデントにタブとスペースが混在
 
-
-   anti pattern :
-   ```python:bad  
+    **anti pattern** :
+    ```python:bad
     class Tab:
         def func():
         	pass
 
     ```
 
-    best practice :
-   ```python:bad
+    **best practice** :
+    ```python:good
     class Tab:
         def func():
             pass
@@ -28,16 +27,15 @@ pycodestyleのエラーの内容をある程度分かるように実際に出る
   * `E111` : Indentation is not a multiple of four
     - インデントのスペースが4の倍数個でない
 
-
-   anti pattern :
-   ```python:bad  
+    **anti pattern** :
+    ```python:bad
     def func():
       pass
 
     ```
 
-    best practice :
-   ```python:bad
+    **best practice** :
+    ```python:good
     def func():
         pass
 
@@ -47,16 +45,15 @@ pycodestyleのエラーの内容をある程度分かるように実際に出る
   * `E112` : Expected an indented block
     - インデントすべき箇所にインデントが存在しない
 
-
-   anti pattern :
-   ```python:bad  
+    **anti pattern** :
+    ```python:bad
     def func():
     pass
 
     ```
 
-    best practice :
-   ```python:bad
+    **best practice** :
+    ```python:good
     def func():
         pass
 
@@ -65,35 +62,33 @@ pycodestyleのエラーの内容をある程度分かるように実際に出る
   * `E113` : Unexpected indentation
     - 予期せぬインデントが存在する
 
-
-   anti pattern :
-   ```python:bad  
+    **anti pattern** :
+    ```python:bad
         def func():
             pass
 
     ```
 
-    best practice :
-   ```python:bad
+    **best practice** :
+    ```python:good
     def func():
         pass
 
     ```
 
-  * `114` : Indentation is not a multiple of four (comment)
+  * `E114` : Indentation is not a multiple of four (comment)
     - インデントのスペースが4の倍数個でない(コメント)
 
-
-   anti pattern :
-   ```python:bad  
+    **anti pattern** :
+    ```python:bad
     def func():
       # `pass` does nothing
         pass
 
     ```
 
-    best practice :
-   ```python:bad
+    **best practice** :
+    ```python:good
     def func():
         # `pass` does nothing
         pass
@@ -103,17 +98,16 @@ pycodestyleのエラーの内容をある程度分かるように実際に出る
   * `E115` : Expected an indented block (comment)
     - インデントすべき箇所にインデントが存在しない(コメント)
 
-
-   anti pattern :
-   ```python:bad  
+    **anti pattern** :
+    ```python:bad
     def func():
     # `pass` does nothing
         pass
 
     ```
 
-    best practice :
-   ```python:bad
+    **best practice** :
+    ```python:good
     def func():
         # `pass` does nothing
         pass
@@ -123,17 +117,16 @@ pycodestyleのエラーの内容をある程度分かるように実際に出る
   * `E116` : Expected an indented block (comment)
     - 予期せぬインデントが存在する(コメント)
 
-
-   anti pattern :
-   ```python:bad  
+    **anti pattern** :
+    ```python:bad
         # This is function
     def func():
         pass
 
     ```
 
-    best practice :
-   ```python:bad
+    **best practice** :
+    ```python:good
     # This is function
     def func():
         pass
@@ -143,27 +136,25 @@ pycodestyleのエラーの内容をある程度分かるように実際に出る
   * `E117` : over-indented
     - インデントが深すぎる
 
-
-   anti pattern :
-   ```python:bad  
+    **anti pattern** :
+    ```python:bad
     def func():
             pass
 
     ```
 
-    best practice :
-   ```python:bad
+    **best practice** :
+    ```python:good
     def func():
         pass
 
     ```
 
-  * `E121` [1], [2]: Continuation line under-indented for hanging indent
-    - [継続行]におけるぶら下げインデントが浅い
+  * `E121` <sup><a href="#ignore">\*</a></sup>, <sup><a href="#noqa">^</a></sup>: Continuation line under-indented for hanging indent
+    - <a href="#continuous_line">継続行</a>におけるぶら下げインデントが浅い
 
-
-   anti pattern :
-   ```python:bad  
+    **anti pattern** :
+    ```python:bad
     {
        'key1': 'value',
        'key2': 'value',
@@ -171,8 +162,8 @@ pycodestyleのエラーの内容をある程度分かるように実際に出る
 
     ```
 
-    best practice :
-   ```python:bad
+    **best practice** :
+    ```python:good
     {
         'key1': 'value',
         'key2': 'value',
@@ -180,14 +171,14 @@ pycodestyleのエラーの内容をある程度分かるように実際に出る
 
     ```
 
-
-   anti pattern :
-   ```python:bad  
+    **anti pattern** :
+    ```python:bad
     print("Python", (
       "Rules"))
 
     ```
 
+    **best practice** :
     ```pyhon:good
     print("Python", (
         "Rules"))
@@ -195,12 +186,11 @@ pycodestyleのエラーの内容をある程度分かるように実際に出る
     ```
 
 
-  * `E122` [2] : Continuation line missing indentation or outdented
-    - [継続行]のインデントが存在しないか、インデントレベルが上回っている
+  * `E122` <sup><a href="#noqa">^</a></sup> : Continuation line missing indentation or outdented
+    - <a href="#continuous_line">継続行</a>のインデントが存在しないか、インデントレベルが上回っている
 
-
-   anti pattern :
-   ```python:bad  
+    **anti pattern** :
+    ```python:bad
     {
     'key1': 'value',
     'key2': 'value',
@@ -208,8 +198,8 @@ pycodestyleのエラーの内容をある程度分かるように実際に出る
 
     ```
 
-    best practice :
-   ```python:bad
+    **best practice** :
+    ```python:good
     {
         'key1': 'value',
         'key2': 'value',
@@ -217,12 +207,11 @@ pycodestyleのエラーの内容をある程度分かるように実際に出る
 
     ```
 
-  * `E123` [1] : Closing bracket does not match indentation of opening bracket’s line
+  * `E123` <sup><a href="#ignore">\*</a></sup> : Closing bracket does not match indentation of opening bracket’s line
     - 閉じ括弧が開き括弧の行のインデントレベルと一致していない
 
-
-   anti pattern :
-   ```python:bad  
+    **anti pattern** :
+    ```python:bad
     {
         'key1': 'value',
         'key2': 'value',
@@ -230,8 +219,8 @@ pycodestyleのエラーの内容をある程度分かるように実際に出る
 
     ```
 
-    best practice :
-   ```python:bad
+    **best practice** :
+    ```python:good
     {
         'key1': 'value',
         'key2': 'value',
@@ -239,9 +228,8 @@ pycodestyleのエラーの内容をある程度分かるように実際に出る
 
     ```
 
-
-   anti pattern :
-   ```python:bad  
+    **anti pattern** :
+    ```python:bad
     result = function_that_takes_arguments(
         'a', 'b', 'c',
         'd', 'e', 'f',
@@ -249,8 +237,8 @@ pycodestyleのエラーの内容をある程度分かるように実際に出る
 
     ```
 
-    best practice :
-   ```python:bad
+    **best practice** :
+    ```python:good
     result = function_that_takes_arguments(
         'a', 'b', 'c',
         'd', 'e', 'f',
@@ -259,20 +247,19 @@ pycodestyleのエラーの内容をある程度分かるように実際に出る
     ```
 
 
-  * `E124` [2] : Closing bracket does not match visual indentation
+  * `E124` <sup><a href="#noqa">^</a></sup> : Closing bracket does not match visual indentation
     - 閉じ括弧のインデントが視覚的に統一できていない
 
-
-   anti pattern :
-   ```python:bad  
+    **anti pattern** :
+    ```python:bad
     result = function_that_takes_arguments('a', 'b', 'c',
                                            'd', 'e', 'f',
     )
 
     ```
 
-    best practice :
-   ```python:bad
+    **best practice** :
+    ```python:good
     result = function_that_takes_arguments('a', 'b', 'c',
                                            'd', 'e', 'f',
                                            )
@@ -280,33 +267,31 @@ pycodestyleのエラーの内容をある程度分かるように実際に出る
     ```
 
 
-  * `E125` [2] : Continuation line with same indent as next logical line
-    - [継続行]のインデントレベルが次に続く論理行と同じインデントレベルになっている  
+  * `E125` <sup><a href="#noqa">^</a></sup> : Continuation line with same indent as next logical line
+    - <a href="#continuous_line">継続行</a>のインデントレベルが次に続く論理行と同じインデントレベルになっている  
      (継続行が次に続く論理行と同じインデントになる場合は継続行のインデントレベルをさらに上げる)
 
-
-   anti pattern :
-   ```python:bad  
+    **anti pattern** :
+    ```python:bad
     if user is not None and user.is_admin or \
-    user.name == 'Grant':
-    blah = 'yeahnah'
+        user.name == 'Grant':
+        blah = 'yeahnah'
 
     ```
 
-    best practice :
-   ```python:bad
+    **best practice** :
+    ```python:good
     if user is not None and user.is_admin or \
             user.name == 'Grant':
         blah = 'yeahnah'
 
     ```
 
-  * `E126` [1],[2] : Continuation line over-indented for hanging indent
-    - [継続行]のインデントが深すぎる
+  * `E126` <sup><a href="#ignore">\*</a></sup>,<sup><a href="#noqa">^</a></sup> : Continuation line over-indented for hanging indent
+    - <a href="#continuous_line">継続行</a>のインデントが深すぎる
 
-
-   anti pattern :
-   ```python:bad  
+    **anti pattern** :
+    ```python:bad
     {
             'key1': 'value',
             'key2': 'value',
@@ -314,8 +299,8 @@ pycodestyleのエラーの内容をある程度分かるように実際に出る
 
     ```
 
-    best practice :
-   ```python:bad
+    **best practice** :
+    ```python:good
     {
         'key1': 'value',
         'key2': 'value',
@@ -323,56 +308,53 @@ pycodestyleのエラーの内容をある程度分かるように実際に出る
 
     ```
 
-  * `E127` [2] : Continuation line over-indented for visual indent
-    - [継続行]のインデントが、視覚的に統一するためのインデントよりも深い
+  * `E127` <sup><a href="#noqa">^</a></sup> : Continuation line over-indented for visual indent
+    - <a href="#continuous_line">継続行</a>のインデントが、視覚的に統一するためのインデントよりも深い
 
-
-   anti pattern :
-   ```python:bad  
+    **anti pattern** :
+    ```python:bad
     print("Python", ("Hello",
                        "World"))
 
     ```
 
-    best practice :
-   ```python:bad
+    **best practice** :
+    ```python:good
     print("Python", ("Hello",
                      "World"))
 
     ```
 
-  * `E128` [2] : Continuation line under-indented for visual indent
-    - [継続行]のインデントが、視覚的に統一するためのインデントよりも浅い
+  * `E128` <sup><a href="#noqa">^</a></sup> : Continuation line under-indented for visual indent
+    - <a href="#continuous_line">継続行</a>のインデントが、視覚的に統一するためのインデントよりも浅い
 
-
-   anti pattern :
-   ```python:bad  
+    **anti pattern** :
+    ```python:bad
     print("Python", ("Hello",
                    "World"))
 
     ```
 
-    best practice :
-   ```python:bad
+    **best practice** :
+    ```python:good
     print("Python", ("Hello",
                      "World"))
 
     ```
 
-  * `E129` [2] : Visually indented line with same indent as next logical line
+  * `E129` <sup><a href="#noqa">^</a></sup> : Visually indented line with same indent as next logical line
     - 視覚的に統一するためのインデントが次に続く論理行と同じインデントレベルになっている
 
-
-   anti pattern :
-   ```python:bad  
+    **anti pattern** :
+    ```python:bad
     if (row < 0 or module_count <= row or
         col < 0 or module_count <= col):
         raise Exception("%s,%s - %s" % (row, col, self.moduleCount))
 
     ```
 
-    best practice :
-   ```python:bad
+    **best practice** :
+    ```python:good
     if (row < 0 or module_count <= row or
             col < 0 or module_count <= col):
         raise Exception("%s,%s - %s" % (row, col, self.moduleCount))
@@ -380,12 +362,11 @@ pycodestyleのエラーの内容をある程度分かるように実際に出る
     ```
 
 
-  * `E131` [2] : Continuation line unaligned for hanging indent
-    - [継続行]のぶら下げのインデントの位置が合っていない
+  * `E131` <sup><a href="#noqa">^</a></sup> : Continuation line unaligned for hanging indent
+    - <a href="#continuous_line">継続行</a>のぶら下げのインデントの位置が合っていない
 
-
-   anti pattern :
-   ```python:bad  
+    **anti pattern** :
+    ```python:bad
     {
         "key1": "value",
         "key2": "value value value"
@@ -394,8 +375,8 @@ pycodestyleのエラーの内容をある程度分かるように実際に出る
 
     ```
 
-    best practice :
-   ```python:bad
+    **best practice** :
+    ```python:good
     {
         "key1": "value",
         "key2": "value value value"
@@ -405,13 +386,12 @@ pycodestyleのエラーの内容をある程度分かるように実際に出る
     ```
 
 
-  * `E133` [1] : Closing bracket is missing indentation
+  * `E133` <sup><a href="#ignore">\*</a></sup> : Closing bracket is missing indentation
     - 閉じ括弧にインデントがない  
     (`--hang-closing` オプションが使用されている場合にのみ発生)
 
-
-   anti pattern :
-   ```python:bad  
+    **anti pattern** :
+    ```python:bad
     my_list = [
         1, 2, 3,
         4, 5, 6,
@@ -419,8 +399,8 @@ pycodestyleのエラーの内容をある程度分かるように実際に出る
 
     ```
 
-    best practice :
-   ```python:bad
+    **best practice** :
+    ```python:good
     my_list = [
         1, 2, 3,
         4, 5, 6,
@@ -428,12 +408,11 @@ pycodestyleのエラーの内容をある程度分かるように実際に出る
 
     ```
 
-  * `E131` [2] : Continuation line unaligned for hanging indent
-    - [継続行]のぶら下げのインデントの位置が合っていない
+  * `E131` <sup><a href="#noqa">^</a></sup> : Continuation line unaligned for hanging indent
+    - <a href="#continuous_line">継続行</a>のぶら下げのインデントの位置が合っていない
 
-
-   anti pattern :
-   ```python:bad  
+    **anti pattern** :
+    ```python:bad
     {
         "key1": "value",
         "key2": "value value value"
@@ -442,8 +421,8 @@ pycodestyleのエラーの内容をある程度分かるように実際に出る
 
     ```
 
-    best practice :
-   ```python:bad
+    **best practice** :
+    ```python:good
     {
         "key1": "value",
         "key2": "value value value"
@@ -458,16 +437,15 @@ pycodestyleのエラーの内容をある程度分かるように実際に出る
   * `E201` : Whitespace after '('
     - 開き括弧の後に空白が入っている
 
-
-   anti pattern :
-   ```python:bad  
+    **anti pattern** :
+    ```python:bad
     with open( 'file.dat') as f:
         contents = f.read()
 
     ```
 
-    best practice :
-   ```python:bad
+    **best practice** :
+    ```python:good
     with open('file.dat') as f:
         contents = f.read()
 
@@ -477,16 +455,15 @@ pycodestyleのエラーの内容をある程度分かるように実際に出る
   * `E202` : Whitespace before ')'
     - 閉じ括弧の前に空白が入っている
 
-
-   anti pattern :
-   ```python:bad  
+    **anti pattern** :
+    ```python:bad
     with open('file.dat' ) as f:
         contents = f.read()
 
     ```
 
-    best practice :
-   ```python:bad
+    **best practice** :
+    ```python:good
     with open('file.dat') as f:
         contents = f.read()
 
@@ -496,53 +473,33 @@ pycodestyleのエラーの内容をある程度分かるように実際に出る
   * `E203` : Whitespace before ':'
     - コロンの前に空白が入っている
 
-
-   anti pattern :
-   ```python:bad  
+    **anti pattern** :
+    ```python:bad
     with open('file.dat') as f :
         contents = f.read()
 
     ```
 
-    best practice :
-   ```python:bad
+    **best practice** :
+    ```python:good
     with open('file.dat') as f:
         contents = f.read()
 
     ```
 
-
-  * `E203` : Whitespace before ':'
-    - コロンの前に空白が入っている
-
-
-   anti pattern :
-   ```python:bad  
-    with open('file.dat') as f :
-        contents = f.read()
-
-    ```
-
-    best practice :
-   ```python:bad
-    with open('file.dat') as f:
-        contents = f.read()
-
-    ```
 
   * `E211` : Whitespace before '('
     - 開き括弧の前に空白が入っている
 
-
-   anti pattern :
-   ```python:bad  
+    **anti pattern** :
+    ```python:bad
     with open ('file.dat') as f:
         contents = f.read()
 
     ```
 
-    best practice :
-   ```python:bad
+    **best practice** :
+    ```python:good
     with open('file.dat') as f:
         contents = f.read()
 
@@ -551,16 +508,15 @@ pycodestyleのエラーの内容をある程度分かるように実際に出る
   * `E221` : Multiple spaces before operator
     - 演算子の前に複数の空白が存在する
 
-
-   anti pattern :
-   ```python:bad  
+    **anti pattern** :
+    ```python:bad
     x = 10
     y = x  * 2
 
     ```
 
-    best practice :
-   ```python:bad
+    **best practice** :
+    ```python:good
     x = 10
     y = x * 2
 
@@ -569,16 +525,15 @@ pycodestyleのエラーの内容をある程度分かるように実際に出る
   * `E222` : Multiple spaces before operator
     - 演算子の後に複数の空白が存在する
 
-
-   anti pattern :
-   ```python:bad  
+    **anti pattern** :
+    ```python:bad
     x = 10
     y = x *  2
 
     ```
 
-    best practice :
-   ```python:bad
+    **best practice** :
+    ```python:good
     x = 10
     y = x * 2
 
@@ -588,16 +543,15 @@ pycodestyleのエラーの内容をある程度分かるように実際に出る
   * `E223` : tab before operator
     - 演算子の前にタブ文字が存在する
 
-
-   anti pattern :
-   ```python:bad  
+    **anti pattern** :
+    ```python:bad
     x = 10
     y = x	* 2
 
     ```
 
-    best practice :
-   ```python:bad
+    **best practice** :
+    ```python:good
     x = 10
     y = x * 2
 
@@ -607,16 +561,15 @@ pycodestyleのエラーの内容をある程度分かるように実際に出る
   * `E224` : tab after operator
     - 演算子の後にタブ文字が存在する
 
-
-   anti pattern :
-   ```python:bad  
+    **anti pattern** :
+    ```python:bad
     x = 10
     y = x *	2
 
     ```
 
-    best practice :
-   ```python:bad
+    **best practice** :
+    ```python:good
     x = 10
     y = x * 2
 
@@ -626,33 +579,31 @@ pycodestyleのエラーの内容をある程度分かるように実際に出る
   * `E225` : Missing whitespace around operator
     - 演算子の前後に空白が存在しない
 
-
-   anti pattern :
-   ```python:bad  
+    **anti pattern** :
+    ```python:bad
     if age>15:
     print('Can drive')
 
     ```
 
-    best practice :
-   ```python:bad
+    **best practice** :
+    ```python:good
     if age > 15:
     print('Can drive')
 
     ```
 
-  * `E226` [1] : Missing whitespace around arithmetic operator
+  * `E226` <sup><a href="#ignore">\*</a></sup> : Missing whitespace around arithmetic operator
     - 算術演算子(`+`, `-`, `/`, `*`)の前後に空白が存在しない
 
-
-   anti pattern :
-   ```python:bad  
+    **anti pattern** :
+    ```python:bad
     age = 10+15
 
     ```
 
-    best practice :
-   ```python:bad
+    **best practice** :
+    ```python:good
     age = 10 + 15
 
     ```
@@ -661,15 +612,14 @@ pycodestyleのエラーの内容をある程度分かるように実際に出る
   * `E227` : Missing whitespace around bitwise or shift operator
     - ビット演算子またはシフト演算子(`<<`, `>>`, `&`, `|`, `^`)の前後に空白が存在しない
 
-
-   anti pattern :
-   ```python:bad  
+    **anti pattern** :
+    ```python:bad
     remainder = 10%2
 
     ```
 
-    best practice :
-   ```python:bad
+    **best practice** :
+    ```python:good
     remainder = 10 % 2
 
     ```
@@ -678,15 +628,14 @@ pycodestyleのエラーの内容をある程度分かるように実際に出る
   * `E228` : Missing whitespace around modulo operator
     - 剰余演算子 (`%`) の前後に空白が存在しない
 
-
-   anti pattern :
-   ```python:bad  
+    **anti pattern** :
+    ```python:bad
     age = 10+15
 
     ```
 
-    best practice :
-   ```python:bad
+    **best practice** :
+    ```python:good
     age = 10 + 15
 
     ```
@@ -695,48 +644,45 @@ pycodestyleのエラーの内容をある程度分かるように実際に出る
   * `E231` : Missing whitespace after ',', ';', or ':'
     - `,`, `;`, `:`の前後に空白が存在しない
 
-
-   anti pattern :
-   ```python:bad  
+    **anti pattern** :
+    ```python:bad
     my_tuple = 1,2,3
 
     ```
 
-    best practice :
-   ```python:bad
+    **best practice** :
+    ```python:good
     my_tuple = 1, 2, 3
 
     ```
 
 
-  * `E241` [1] : Multiple spaces after ‘,’
+  * `E241` <sup><a href="#ignore">\*</a></sup> : Multiple spaces after ‘,’
     - `,`の後に複数の空白が存在する
 
-
-   anti pattern :
-   ```python:bad  
+    **anti pattern** :
+    ```python:bad
     my_tuple = 1,  2
 
     ```
 
-    best practice :
-   ```python:bad
+    **best practice** :
+    ```python:good
     my_tuple = 1, 2
 
     ```
 
-  * `E242` [1] : Tab after ','
+  * `E242` <sup><a href="#ignore">\*</a></sup> : Tab after ','
     - `,`の後にタブ文字が存在する
 
-
-   anti pattern :
-   ```python:bad  
+    **anti pattern** :
+    ```python:bad
     my_tuple = 1,	2,	3
 
     ```
 
-    best practice :
-   ```python:bad
+    **best practice** :
+    ```python:good
     my_tuple = 1, 2, 3
 
     ```
@@ -745,20 +691,19 @@ pycodestyleのエラーの内容をある程度分かるように実際に出る
   * `E251` : Unexpected spaces around keyword / parameter equals
     - 関数定義時の `=` 前後に空白が存在する
 
-
-   anti pattern :
-   ```python:bad  
+    **anti pattern** :
+    ```python:bad
     def func(key1 = 'val1',
          key2 = 'val2'):
-    return key1, key2
+         return key1, key2
 
     ```
 
-    best practice :
-   ```python:bad
+    **best practice** :
+    ```python:good
     def func(key1='val1',
          key2='val2'):
-    return key1, key2
+         return key1, key2
 
     ```
 
@@ -766,16 +711,15 @@ pycodestyleのエラーの内容をある程度分かるように実際に出る
   * `E261` : At least two spaces before inline comment
     - インラインコメントの前には少なくとも2つのスペースが必要である
 
-
-   anti pattern :
-   ```python:bad  
+    **anti pattern** :
+    ```python:bad
     def print_name(self):
         print(self.name) # This comment needs an extra space
 
     ```
 
-    best practice :
-   ```python:bad
+    **best practice** :
+    ```python:good
     def print_name(self):
         print(self.name)  # Comment is correct now
 
@@ -785,16 +729,15 @@ pycodestyleのエラーの内容をある程度分かるように実際に出る
   * `E262` : Inline comment should start with '# '
     - インラインコメントは `# ` で始める必要がある
 
-
-   anti pattern :
-   ```python:bad  
+    **anti pattern** :
+    ```python:bad
     def print_name(self):
         print(self.name)  #This comment needs a space
 
     ```
 
-    best practice :
-   ```python:bad
+    **best practice** :
+    ```python:good
     def print_name(self):
         print(self.name)  # Comment is correct now
 
@@ -804,17 +747,16 @@ pycodestyleのエラーの内容をある程度分かるように実際に出る
   * `E265` : Block comment should start with '# '
     - ブロックコメントは `# ` で始める必要がある
 
-
-   anti pattern :
-   ```python:bad  
+    **anti pattern** :
+    ```python:bad
     #This comment needs a space
     def print_name(self):
         print(self.name)
 
     ```
 
-    best practice :
-   ```python:bad
+    **best practice** :
+    ```python:good
     # Comment is correct now
     def print_name(self):
         print(self.name)
@@ -825,16 +767,15 @@ pycodestyleのエラーの内容をある程度分かるように実際に出る
   * `E266` : Too many leading '#' for block comment
     - ブロックコメントを開始する `#` が多すぎる
 
-
-   anti pattern :
-   ```python:bad  
+    **anti pattern** :
+    ```python:bad
     ## Prints hello
     print('hello')
 
     ```
 
-    best practice :
-   ```python:bad
+    **best practice** :
+    ```python:good
     # Prints hello
     print('hello')
 
@@ -844,16 +785,15 @@ pycodestyleのエラーの内容をある程度分かるように実際に出る
   * `E271` : Multiple spaces after keyword
     - キーワードの後に複数の空白が存在する
 
-
-   anti pattern :
-   ```python:bad  
+    **anti pattern** :
+    ```python:bad
     def  func():
         pass
 
     ```
 
-    best practice :
-   ```python:bad
+    **best practice** :
+    ```python:good
     def func():
         pass
 
@@ -863,17 +803,16 @@ pycodestyleのエラーの内容をある程度分かるように実際に出る
   * `E272` : Multiple spaces before keyword
     - キーワードの前に複数の空白が存在する
 
-
-   anti pattern :
-   ```python:bad  
+    **anti pattern** :
+    ```python:bad
     def func():
         if 1  in [1, 2, 3]:
             print('yep!')
 
     ```
 
-    best practice :
-   ```python:bad
+    **best practice** :
+    ```python:good
     def func():
         if 1 in [1, 2, 3]:
             print('yep!')
@@ -884,16 +823,15 @@ pycodestyleのエラーの内容をある程度分かるように実際に出る
   * `E273` : Tab after keyword
     - キーワードの後にタブ文字が存在する
 
-
-   anti pattern :
-   ```python:bad  
+    **anti pattern** :
+    ```python:bad
     def	func():
         pass
 
     ```
 
-    best practice :
-   ```python:bad
+    **best practice** :
+    ```python:good
     def func():
         pass
 
@@ -903,17 +841,16 @@ pycodestyleのエラーの内容をある程度分かるように実際に出る
   * `E274` : Tab before keyword
     - キーワードの前にタブ文字が存在する
 
-
-   anti pattern :
-   ```python:bad  
+    **anti pattern** :
+    ```python:bad
     def func():
         if 1	in [1, 2, 3]:
             print('yep!')
 
     ```
 
-    best practice :
-   ```python:bad
+    **best practice** :
+    ```python:good
     def func():
         if 1 in [1, 2, 3]:
             print('yep!')
@@ -923,15 +860,14 @@ pycodestyleのエラーの内容をある程度分かるように実際に出る
   * `E275` : Missing whitespace after keyword
     - キーワードの後に空白が存在しない
 
-
-   anti pattern :
-   ```python:bad  
+    **anti pattern** :
+    ```python:bad
     from collections import(namedtuple, defaultdict)
 
     ```
 
-    best practice :
-   ```python:bad
+    **best practice** :
+    ```python:good
     from collections import (namedtuple, defaultdict)
 
     ```
@@ -942,9 +878,8 @@ pycodestyleのエラーの内容をある程度分かるように実際に出る
   * `E301` : Expected 1 blank line, found 0
     - クラスのメソッド間に1行の空白行が必要
 
-
-   anti pattern :
-   ```python:bad  
+    **anti pattern** :
+    ```python:bad
     class MyClass(object):
     def func1():
         pass
@@ -953,8 +888,8 @@ pycodestyleのエラーの内容をある程度分かるように実際に出る
 
     ```
 
-    best practice :
-   ```python:bad
+    **best practice** :
+    ```python:good
     class MyClass(object):
     def func1():
         pass
@@ -968,9 +903,8 @@ pycodestyleのエラーの内容をある程度分かるように実際に出る
   * `E302` : Expected 2 blank lines, found 0
     - 関数とクラスの間に2行の空白行が必要
 
-
-   anti pattern :
-   ```python:bad  
+    **anti pattern** :
+    ```python:bad
     def func1():
         pass
     def func2():
@@ -978,8 +912,8 @@ pycodestyleのエラーの内容をある程度分かるように実際に出る
 
     ```
 
-    best practice :
-   ```python:bad
+    **best practice** :
+    ```python:good
     def func1():
         pass
 
@@ -993,9 +927,8 @@ pycodestyleのエラーの内容をある程度分かるように実際に出る
   * `E303` : Too many blank lines (3)
     - 空白行が多すぎる
 
-
-   anti pattern :
-   ```python:bad  
+    **anti pattern** :
+    ```python:bad
     def func1():
         pass
 
@@ -1006,8 +939,8 @@ pycodestyleのエラーの内容をある程度分かるように実際に出る
 
     ```
 
-    best practice :
-   ```python:bad
+    **best practice** :
+    ```python:good
     def func1():
         pass
 
@@ -1021,9 +954,8 @@ pycodestyleのエラーの内容をある程度分かるように実際に出る
   * `E304` : Blank lines found after function decorator
     - 関数デコレータの後に空白行が存在する
 
-
-   anti pattern :
-   ```python:bad  
+    **anti pattern** :
+    ```python:bad
     class User(object):
 
         @property
@@ -1033,8 +965,8 @@ pycodestyleのエラーの内容をある程度分かるように実際に出る
 
     ```
 
-    best practice :
-   ```python:bad
+    **best practice** :
+    ```python:good
     class User(object):
 
         @property
@@ -1046,17 +978,16 @@ pycodestyleのエラーの内容をある程度分かるように実際に出る
     * `E305` : Expected 2 blank lines after end of function or class
       - 関数またはクラスの終了後は2行の空白行が必要
 
-
-   anti pattern :
-   ```python:bad  
+      **anti pattern** :
+    ```python:bad
       class User(object):
           pass
       user = User()
 
     ```
 
-      best practice :
-   ```python:bad
+      **best practice** :
+    ```python:good
       class User(object):
           pass
 
@@ -1071,15 +1002,14 @@ pycodestyleのエラーの内容をある程度分かるように実際に出る
   * `E401` : Multiple imports on one line
     - 1行に複数回のインポートが行われている
 
-
-   anti pattern :
-   ```python:bad  
+    **anti pattern** :
+    ```python:bad
     import collections, os, sys
 
     ```
 
-    best practice :
-   ```python:bad
+    **best practice** :
+    ```python:good
     import collections
     import os
     import sys
@@ -1090,9 +1020,8 @@ pycodestyleのエラーの内容をある程度分かるように実際に出る
   * `E402` : Module level import not at top of file
     - モジュールレベルのインポートがファイルの先頭以外で行われている
 
-
-   anti pattern :
-   ```python:bad  
+    **anti pattern** :
+    ```python:bad
     import locale
 
     locale.setlocale(locale.LC_ALL, 'en_US.UTF-8')
@@ -1101,8 +1030,8 @@ pycodestyleのエラーの内容をある程度分かるように実際に出る
 
     ```
 
-    best practice :
-   ```python:bad
+    **best practice** :
+    ```python:good
     import locale
     import sys
 
@@ -1113,7 +1042,7 @@ pycodestyleのエラーの内容をある程度分かるように実際に出る
 
 ## `E5` - 行の長さに関するエラー
 
-  * `E501` [2] : Line to long ((length) > 79 characters)
+  * `E501` <sup><a href="#noqa">^</a></sup> : Line to long ((length) > 79 characters)
     - 一行の文字数が多すぎる
     - 推奨最大文字数は79文字
     - 100または120文字に変更することは一般的
@@ -1122,9 +1051,8 @@ pycodestyleのエラーの内容をある程度分かるように実際に出る
   * `E502` : The backslash is redundant between brackets
     - 括弧の中に冗長なバックスラッシュが存在している
 
-
-   anti pattern :
-   ```python:bad  
+    **anti pattern** :
+    ```python:bad
     print('Four score and seven years ago our fathers brought '\
           'forth, upon this continent, a new nation, conceived '\
           'in liberty, and dedicated to the proposition that '\
@@ -1132,8 +1060,8 @@ pycodestyleのエラーの内容をある程度分かるように実際に出る
 
     ```
 
-    best practice :
-   ```python:bad
+    **best practice** :
+    ```python:good
     print('Four score and seven years ago our fathers brought '
           'forth, upon this continent, a new nation, conceived '
           'in liberty, and dedicated to the proposition that '
@@ -1147,15 +1075,14 @@ pycodestyleのエラーの内容をある程度分かるように実際に出る
   * `E701` : Multiple statements on one line (colon)
     - 一行に複数のステートメントが存在する( `:` )
 
-
-   anti pattern :
-   ```python:bad  
+    **anti pattern** :
+    ```python:bad
     if x > 5: y = 10
 
     ```
 
-    best practice :
-   ```python:bad
+    **best practice** :
+    ```python:good
     if x > 5:
         y = 10
 
@@ -1164,15 +1091,14 @@ pycodestyleのエラーの内容をある程度分かるように実際に出る
   * `E702` : Multiple statements on one line (semicolon)
     - 一行に複数のステートメントが存在する( `;` )
 
-
-   anti pattern :
-   ```python:bad  
+    **anti pattern** :
+    ```python:bad
     from gevent import monkey; monkey.patch_all()
 
     ```
 
-    best practice :
-   ```python:bad
+    **best practice** :
+    ```python:good
     from gevent import monkey
     monkey.patch_all()
 
@@ -1182,44 +1108,41 @@ pycodestyleのエラーの内容をある程度分かるように実際に出る
   * `E703` : Statement ends with a semicolon
     - ステートメントがセミコロンで終了している
 
-
-   anti pattern :
-   ```python:bad  
+    **anti pattern** :
+    ```python:bad
     print('Hello world!');
 
     ```
 
-    best practice :
-   ```python:bad
+    **best practice** :
+    ```python:good
     print('Hello world!')
 
     ```
 
 
-  * `E704` [1] : Multiple statements on one line (def)
+  * `E704` <sup><a href="#ignore">\*</a></sup> : Multiple statements on one line (def)
     - 関数定義の複数ステートメントが一行で行われている
 
-
-   anti pattern :
-   ```python:bad  
+    **anti pattern** :
+    ```python:bad
     def f(): pass
 
     ```
 
-    best practice :
-   ```python:bad
+    **best practice** :
+    ```python:good
     def f():
         pass
 
     ```
 
 
-  * `E711` [2] : Comparison to none should be 'if cond is none:'
+  * `E711` <sup><a href="#noqa">^</a></sup> : Comparison to none should be 'if cond is none:'
     - True, False, Noneといったシングルトンオブジェクトを同一性ではなく等価性で比較している
 
-
-   anti pattern :
-   ```python:bad  
+    **anti pattern** :
+    ```python:bad
     if var != True:
         print("var is not equal to True")
     if var == None:
@@ -1227,8 +1150,8 @@ pycodestyleのエラーの内容をある程度分かるように実際に出る
 
     ```
 
-    best practice :
-   ```python:bad
+    **best practice** :
+    ```python:good
     if var is not True
         print("var is not True")
     if var is None
@@ -1236,20 +1159,19 @@ pycodestyleのエラーの内容をある程度分かるように実際に出る
 
     ```
 
-  * `E712` [2] : Comparison to true should be 'if cond is true:' or 'if cond:'
+  * `E712` <sup><a href="#noqa">^</a></sup> : Comparison to true should be 'if cond is true:' or 'if cond:'
     - `True` との比較を等価演算子を用いて行っている
 
-
-   anti pattern :
-   ```python:bad  
+    **anti pattern** :
+    ```python:bad
     x = True
     if x == True:
         print('True!')
 
     ```
 
-    best practice :
-   ```python:bad
+    **best practice** :
+    ```python:good
     x = True
     if x is True:
         print('True!')
@@ -1264,17 +1186,16 @@ pycodestyleのエラーの内容をある程度分かるように実際に出る
   * `E713` : Test for membership should be 'not in'
     - 要素の検証に `in` の結果の否定が使われている
 
-
-   anti pattern :
-   ```python:bad  
+    **anti pattern** :
+    ```python:bad
     my_list = [1, 2, 3]
     if not num in my_list:
         print(num)
 
     ```
 
-    best practice :
-   ```python:bad
+    **best practice** :
+    ```python:good
     my_list = [1, 2, 3]
     if num not in my_list:
         print(num)
@@ -1285,35 +1206,33 @@ pycodestyleのエラーの内容をある程度分かるように実際に出る
   * `E714` : Test for object identity should be 'is not'
     - オブジェクトの同一性の検証に `is` の結果の否定が使われている
 
-
-   anti pattern :
-   ```python:bad  
+    **anti pattern** :
+    ```python:bad
     if not user is None:
         print(user.name)
 
     ```
 
-    best practice :
-   ```python:bad
+    **best practice** :
+    ```python:good
     if user is not None:
         print(user.name)
 
     ```
 
 
-  * `E721` [2] : Do not compare types, use 'isinstance()'
+  * `E721` <sup><a href="#noqa">^</a></sup> : Do not compare types, use 'isinstance()'
     - 型の比較に `isinstance()` を使用していない
 
-
-   anti pattern :
-   ```python:bad  
+    **anti pattern** :
+    ```python:bad
     if type(user) == User:
         print(user.name)
 
     ```
 
-    best practice :
-   ```python:bad
+    **best practice** :
+    ```python:good
     if isinstance(user, User):
         print(user.name)
 
@@ -1322,9 +1241,8 @@ pycodestyleのエラーの内容をある程度分かるように実際に出る
   * `E722` : Do not use bare except, specify exception instead
     - 例外捕捉時に例外クラスを指定していない
 
-
-   anti pattern :
-   ```python:bad  
+    **anti pattern** :
+    ```python:bad
     try:
         func()
     except:
@@ -1332,8 +1250,8 @@ pycodestyleのエラーの内容をある程度分かるように実際に出る
 
     ```
 
-    best practice :
-   ```python:bad
+    **best practice** :
+    ```python:good
     try:
         func()
     except Exception:
@@ -1345,15 +1263,14 @@ pycodestyleのエラーの内容をある程度分かるように実際に出る
   * `E731` : Do not assign a lambda expression, use a def
     - ラムダ式を変数に代入している
 
-
-   anti pattern :
-   ```python:bad  
+    **anti pattern** :
+    ```python:bad
     root = lambda folder_name: os.path.join(BASE_DIR, folder_name)
 
     ```
 
-    best practice :
-   ```python:bad
+    **best practice** :
+    ```python:good
     def root(folder_name):
         return os.path.join(BASE_DIR, folder_name)
 
@@ -1363,15 +1280,14 @@ pycodestyleのエラーの内容をある程度分かるように実際に出る
   * `E741` : Do not use variables named 'l', 'O', or 'I'
     - `l`, `O`, `I` といった紛らわしい変数名を使用している
 
-
-   anti pattern :
-   ```python:bad  
+    **anti pattern** :
+    ```python:bad
     l = []
 
     ```
 
-    best practice :
-   ```python:bad
+    **best practice** :
+    ```python:good
     list_name = []
 
     ```
@@ -1380,9 +1296,8 @@ pycodestyleのエラーの内容をある程度分かるように実際に出る
   * `E742` : Do not define classes named 'l', 'O', or 'I'
     - `l`, `O`, `I` といった紛らわしいクラス名を使用している
 
-
-   anti pattern :
-   ```python:bad  
+    **anti pattern** :
+    ```python:bad
     class I:
 
         def func():
@@ -1390,8 +1305,8 @@ pycodestyleのエラーの内容をある程度分かるように実際に出る
 
     ```
 
-    best practice :
-   ```python:bad
+    **best practice** :
+    ```python:good
     class Icon:
 
         def func():
@@ -1403,16 +1318,15 @@ pycodestyleのエラーの内容をある程度分かるように実際に出る
   * `E743` : Do not define functions named 'l', 'O', or 'I'
     - `l`, `O`, `I` といった紛らわしい関数名を使用している
 
-
-   anti pattern :
-   ```python:bad  
+    **anti pattern** :
+    ```python:bad
     def O:
       pass
 
     ```
 
-    best practice :
-   ```python:bad
+    **best practice** :
+    ```python:good
     def oh:
       pass
 
@@ -1434,16 +1348,15 @@ pycodestyleのエラーの内容をある程度分かるように実際に出る
   * `W191` : Indentation contains tabs
     - タブでインデントされている行が存在する
 
-
-   anti pattern :
-   ```python:bad  
+    **anti pattern** :
+    ```python:bad
     def func():
     	pass
 
     ```
 
-    best practice :
-   ```python:bad
+    **best practice** :
+    ```python:good
     def func():
         pass
 
@@ -1455,16 +1368,15 @@ pycodestyleのエラーの内容をある程度分かるように実際に出る
   * `W291` : Trailing whitespace
     - 行末に空白が存在する
 
-
-   anti pattern :
-   ```python:bad  
+    **anti pattern** :
+    ```python:bad
     def func():
         pass  
 
     ```
 
-    best practice :
-   ```python:bad
+    **best practice** :
+    ```python:good
     def func():
         pass
 
@@ -1474,15 +1386,14 @@ pycodestyleのエラーの内容をある程度分かるように実際に出る
   * `W292` : No newline at end of file
     - ファイルの末尾に改行が存在しない
 
-
-   anti pattern :
-   ```python:bad  
+    **anti pattern** :
+    ```python:bad
     def func():
         pass
     ```
 
-    best practice :
-   ```python:bad
+    **best practice** :
+    ```python:good
     def func():
         pass
 
@@ -1492,9 +1403,8 @@ pycodestyleのエラーの内容をある程度分かるように実際に出る
   * `W293` : Blank line contains whitespace
     - 空白行に空白またはタブが存在する
 
-
-   anti pattern :
-   ```python:bad  
+    **anti pattern** :
+    ```python:bad
     def first_func():
         pass
         # This line contains four spaces
@@ -1504,8 +1414,8 @@ pycodestyleのエラーの内容をある程度分かるように実際に出る
 
     ```
 
-    best practice :
-   ```python:bad
+    **best practice** :
+    ```python:good
     def first_func():
         pass
 
@@ -1520,17 +1430,16 @@ pycodestyleのエラーの内容をある程度分かるように実際に出る
   * `W391` : Blank line at end of file
     - ファイルの末尾に複数の空白行が存在する
 
-
-   anti pattern :
-   ```python:bad  
+    **anti pattern** :
+    ```python:bad
     def func():
         pass
 
 
     ```
 
-    best practice :
-   ```python:bad
+    **best practice** :
+    ```python:good
     def func():
         pass
 
@@ -1539,53 +1448,50 @@ pycodestyleのエラーの内容をある程度分かるように実際に出る
 
 ## `W5` - 改行に関する警告
 
-  * `W503` [1] : Line break occurred before a binary operator
+  * `W503` <sup><a href="#ignore">\*</a></sup> : Line break occurred before a binary operator
     - 二項演算子の前に改行が存在する  
       (現在非推奨, `W504` と排他的な関係)
 
-
-   anti pattern :
-   ```python:bad  
+    **anti pattern** :
+    ```python:bad
     income = (gross_wages
               + taxable_interest)
 
     ```
 
-    best practice :
-   ```python:bad
+    **best practice** :
+    ```python:good
     income = (gross_wages +
               taxable_interest)
 
     ```
 
 
-  * `W504` [1] : Line break occurred after a binary operator
+  * `W504` <sup><a href="#ignore">\*</a></sup> : Line break occurred after a binary operator
     - 二項演算子の後に改行が存在する  
       (`W503` と排他的な関係)
 
-
-   anti pattern :
-   ```python:bad  
+    **anti pattern** :
+    ```python:bad
     income = (gross_wages +
               taxable_interest)
 
     ```
 
-    best practice :
-   ```python:bad
+    **best practice** :
+    ```python:good
     income = (gross_wages
               + taxable_interest)
 
     ```
 
 
-  * `W505` [1] [2] : Doc line too long ((length) > 79 characters)
+  * `W505` <sup><a href="#ignore">\*</a></sup> <sup><a href="#noqa">^</a></sup> : Doc line too long ((length) > 79 characters)
     - コメントまたはdocstringの一行の文字数が多すぎる  
       (79文字が基準だが、flake8では `max-doc-length` の値を与えなければ警告されない)
 
-
-   anti pattern :
-   ```python:bad  
+    **anti pattern** :
+    ```python:bad
     def func():
         """
         Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing
@@ -1595,8 +1501,8 @@ pycodestyleのエラーの内容をある程度分かるように実際に出る
 
     ```
 
-    best practice :
-   ```python:bad
+    **best practice** :
+    ```python:good
     def func():
         """
         Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing
@@ -1614,15 +1520,14 @@ pycodestyleのエラーの内容をある程度分かるように実際に出る
   * `W601` : .has_key() is deprecated, use ‘in’
     - `.has_key()` メソッドの使用
 
-
-   anti pattern :
-   ```python:bad  
+    **anti pattern** :
+    ```python:bad
     {'key': 'value'}.has_key('key')
 
     ```
 
-    best practice :
-   ```python:bad
+    **best practice** :
+    ```python:good
     'key' in {'key': 'value'}
 
     ```
@@ -1630,9 +1535,8 @@ pycodestyleのエラーの内容をある程度分かるように実際に出る
   * `W602` : Deprecated form of raising exception
     - 非推奨の形式( `raise Exception, message` )で例外を発生させている
 
-
-   anti pattern :
-   ```python:bad  
+    **anti pattern** :
+    ```python:bad
     def can_drive(age):
         if age < 16:
             raise ValueError, 'Not old enough to drive'
@@ -1640,8 +1544,8 @@ pycodestyleのエラーの内容をある程度分かるように実際に出る
 
     ```
 
-    best practice :
-   ```python:bad
+    **best practice** :
+    ```python:good
     def can_drive(age):
         if age < 16:
             raise ValueError('Not old enough to drive')
@@ -1653,15 +1557,14 @@ pycodestyleのエラーの内容をある程度分かるように実際に出る
   * `W603` : '<>' is deprecated, use '!='
     - 非等価の比較に `<>` を用いている
 
-
-   anti pattern :
-   ```python:bad  
+    **anti pattern** :
+    ```python:bad
     assert 'test' <> 'testing'
 
     ```
 
-    best practice :
-   ```python:bad
+    **best practice** :
+    ```python:good
     assert 'test' != 'testing'
 
     ```
@@ -1670,16 +1573,15 @@ pycodestyleのエラーの内容をある程度分かるように実際に出る
   * `W604` : Backticks are deprecated, use 'repr()'
     - Python3で廃止されたバッククォートによるオブジェクトの文字列化を試みている
 
-
-   anti pattern :
-   ```python:bad  
+    **anti pattern** :
+    ```python:bad
     obj = MyObj()
     print(`obj`)
 
     ```
 
-    best practice :
-   ```python:bad
+    **best practice** :
+    ```python:good
     obj = MyObj()
     print(repr(obj))
 
@@ -1690,15 +1592,14 @@ pycodestyleのエラーの内容をある程度分かるように実際に出る
     - 無効なエスケープシーケンスを用いている  
       (バックスラッシュと値の組み合わせは全てエスケープシーケンスとみなされる)
 
-
-   anti pattern :
-   ```python:bad  
+    **anti pattern** :
+    ```python:bad
     regex = '\.png$'
 
     ```
 
-    best practice :
-   ```python:bad
+    **best practice** :
+    ```python:good
     regex = r'\.png$'
 
     ```
@@ -1707,24 +1608,25 @@ pycodestyleのエラーの内容をある程度分かるように実際に出る
   * `W606` : ‘async’ and ‘await’ are reserved keywords starting with Python 3.7
     - Python 3.7以降の予約語である `async` と `await` を用いている
 
-
-   anti pattern :
-   ```python:bad  
+    **anti pattern** :
+    ```python:bad
     def async():
         pass
 
     ```
 
-    best practice :
-   ```python:bad
+    **best practice** :
+    ```python:good
     def my_async():
         pass
 
     ```
 
 
-[継続行]:一行で表現可能なコード(辞書型のリテラルやメソッドの引数など)を複数行にしたもの
+## 注釈
 
-[1]:賛否あるルールのため、`ignore`を使用していない場合はデフォルトで無視される
+ * <span id="continuous_line" style="font-size:x-small">継続行: 一行で表現可能なコード(辞書型のリテラルやメソッドの引数など)を複数行にしたもの</span>
 
-[2]:`#&nbspnoqa`コメントにより一時的にルールを無効化可能
+ * <span id="ignore" style="font-size:x-small">\*: 賛否あるルールのため、 `ignore` を使用していない場合はデフォルトで無視される</span>
+
+ * <span id="noqa" style="font-size:x-small">^: `# noqa` コメントにより一時的にルールを無効化可能
